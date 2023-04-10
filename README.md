@@ -1,24 +1,18 @@
 # gpao
 
-## Project setup
+## installation du backend
 ```
+cd backend
 npm install
+npm run dev
 ```
-
-### Compiles and hot-reloads for development
+## installation du frontend
 ```
+cd frontend
+npm install
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+PS: vérifier que votre navigateur autorise l'accès à votre webcam pour capturer le QRcode
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

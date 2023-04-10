@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "commande-01",
+    "state": "à traiter"
+  },
+  {
+    "id": "2",
+    "name": "commande-02",
+    "state": "livrée partiellement"
+  },
+  {
+    "id": "3",
+    "name": "commande-03",
+    "state": "livrée"
+  }
+]
