@@ -7,16 +7,16 @@ exports.createCommande = (req, res, next) => {
   dataCommandes.push(req.body);
   res.status(201).json(dataCommandes);
 };
-/*
-exports.updateCommande = (req, res, next) => {
-  res.status(200).json(data);
-};*/
 
 exports.addProduct = async (req, res, next) => {
   if (
     !req.params.productName.match(/^(KeyNetic|KeyVibe)_V[1-9]\d*_[A-Z0-9]{6}$/i)
   ) {
     res.status(404).json({ messageError: 'Réference produit non valide' });
+  } else if (
+    dataProduitsCommandes.find((pdt) => pdt.name === req.params.productName)
+  ) {
+    res.status(404).json({ messageError: 'Produit en doublon' });
   } else {
     let qrcode = '';
     await QRCode.toDataURL(req.params.productName)
