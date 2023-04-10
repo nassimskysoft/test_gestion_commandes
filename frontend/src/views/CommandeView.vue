@@ -268,6 +268,7 @@ export default {
           .then((response) => {
             if (response.status == 201) {
               this.commandeProtuisData = response.data;
+              this.refProduit = "";
             }
           })
           .catch((err) => {
